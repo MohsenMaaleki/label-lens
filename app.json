@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Label Lens",
+    "slug": "label-lens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F3F5F9",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mohsen.labellens",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Label Lens uses the camera to photograph the document you want explained.",
+        "NSPhotoLibraryUsageDescription": "Label Lens lets you pick a photo of a document to explain."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FCE38A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true,
+      "package": "com.mohsen.labellens",
+      "permissions": [
+        "CAMERA",
+        "com.android.vending.BILLING",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "labellens",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Label Lens uses the camera to photograph the document you want explained.",
+          "photosPermission": "Label Lens lets you pick a photo of a document to explain."
+        }
+      ],
+      "expo-notifications",
+      "expo-font",
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F3F5F9",
+          "image": "./assets/splash-logo.png",
+          "imageWidth": 200,
+          "dark": {
+            "backgroundColor": "#111214",
+            "image": "./assets/splash-logo-dark.png"
+          }
+        }
+      ],
+      "./plugins/withAccentColor"
+    ]
+  }
+}

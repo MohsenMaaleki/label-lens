@@ -1,0 +1,84 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
+
+# worker
+worker/node_modules/
+worker/.wrangler/
+
+# secrets: every file that can hold an API key, token or signing credential
+# .env, .env.local, .env.production, worker/.env, ... (only the example is tracked)
+.env*
+!.env.example
+# Wrangler local secrets: .dev.vars, .dev.vars.<env>
+.dev.vars*
+!.dev.vars.example
+# Firebase / Google config files (they contain API keys)
+google-services.json
+GoogleService-Info.plist
+# EAS and store signing / service-account credentials
+credentials.json
+*.keystore
+*service-account*.json
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# build outputs / app binaries
+dist/
+build/
+coverage/
+*.apk
+*.aab
+*.ipa
+
+# root-level wrangler state (worker/.wrangler already covered above)
+.wrangler/

@@ -1,0 +1,15 @@
+name = "label-lens-api"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Tested 2026-09-26 on a sample letter in Persian: 3-flash-preview gave correct codes, dates and natural
+# Persian; 3.6/3.7/3.8 Flash were mostly 503 "high demand" on the free tier; 3.5 Flash-Lite was fast but
+# made translation mistakes. It is a preview model, so the fallback also covers a future shutdown.
+GEMINI_MODEL = "gemini-3-flash-preview"
+# Asked once when the main model is busy, slow or returns bad output.
+GEMINI_FALLBACK_MODEL = "gemini-3.5-flash-lite"
+
+# Secrets (never commit):
+#   npx wrangler secret put GEMINI_API_KEY
+#   npx wrangler secret put APP_TOKEN
